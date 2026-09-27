@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2c1810">
+  <meta name="description" content="Spice Garden Restaurant brings Indian, South Indian, Chinese and Continental favourites to your table. Dine in, explore our menu or reserve a table.">
+  <title>Spice Garden Restaurant | Taste the Tradition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header class="navbar" id="top">
+    <div class="container">
+      <a class="nav-logo" href="#home" aria-label="Spice Garden Restaurant home">
+        <span class="nav-logo-icon"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i></span>
+        <span class="nav-logo-text">Spice <span>Garden</span></span>
+      </a>
+      <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-order-btn" href="#menu">Order Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </nav>
+      <button class="nav-cart" id="cart-open" type="button" aria-label="Open cart, 0 items" aria-controls="cart-sidebar">
+        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+        <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content fade-in">
+        <span class="hero-badge"><i class="fa-solid fa-star" aria-hidden="true"></i> A little taste of home</span>
+        <h1 class="hero-title" id="hero-title">Spice <span>Garden</span><br>Restaurant</h1>
+        <p class="hero-tagline">Taste the Tradition, Love Every Bite</p>
+        <p class="hero-desc">From the first crackle of the dosa to the last spoon of dessert, find your new favourite at our table.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#menu">View Menu <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-secondary" href="#reservation">Book a Table</a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator"><a href="#about" aria-label="Scroll to About"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a></div>
+    </section>
+
+    <section class="about section-padding" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-image-wrapper fade-in-left">
+          <div class="about-image"><img src="assets/images/about-restaurant.jpg" alt="Warmly lit dining room at Spice Garden" loading="lazy"></div>
+          <div class="about-experience-badge"><span class="years">Since</span><span class="label">Good food<br>brings us together</span></div>
+        </div>
+        <div class="about-content fade-in-right">
+          <span class="section-subtitle">Our Story</span>
+          <h2 class="section-title" id="about-title">A table full of flavour, a feeling of home</h2>
+          <p class="about-text">Spice Garden began with a simple idea: the best meals are the ones you want to share. We bring the warmth of Indian kitchens to a menu that travels from South Indian classics to Chinese and Continental favourites.</p>
+          <p class="about-text">Every dish is made to order with fresh ingredients, thoughtful seasoning and the kind of care that makes a quick lunch feel like a little occasion. Come as you are; there is always room at our table.</p>
+          <div class="about-features">
+            <div class="about-feature"><i class="fa-solid fa-leaf" aria-hidden="true"></i><span>Fresh ingredients</span></div>
+            <div class="about-feature"><i class="fa-solid fa-heart" aria-hidden="true"></i><span>Made with care</span></div>
+            <div class="about-feature"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i><span>Recipes worth sharing</span></div>
+            <div class="about-feature"><i class="fa-solid fa-face-smile" aria-hidden="true"></i><span>Warm, thoughtful service</span></div>
+          </div>
+          <a class="btn btn-dark" href="#contact">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu section-padding" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-subtitle">Made fresh, served with joy</span>
+          <h2 class="section-title" id="menu-title">A menu for every mood</h2>
+          <p class="section-desc">A few house favourites to get you started. Filter by category and add a little something to your bag.</p>
+          <div class="title-divider"></div>
+        </div>
+        <div class="menu-categories" role="group" aria-label="Filter menu by category">
+          <button class="menu-category-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="menu-category-btn" type="button" data-filter="starters" aria-pressed="false">Starters</button>
+          <button class="menu-category-btn" type="button" data-filter="south-indian" aria-pressed="false">South Indian</button>
+          <button class="menu-category-btn" type="button" data-filter="main-course" aria-pressed="false">Main Course</button>
+          <button class="menu-category-btn" type="button" data-filter="chinese" aria-pressed="false">Chinese</button>
+          <button class="menu-category-btn" type="button" data-filter="biryani" aria-pressed="false">Biryani</button>
+          <button class="menu-category-btn" type="button" data-filter="desserts" aria-pressed="false">Desserts</button>
+          <button class="menu-category-btn" type="button" data-filter="drinks" aria-pressed="false">Drinks</button>
+        </div>
+        <div class="menu-grid" id="menu-grid">
+          <article class="menu-card fade-in" data-category="starters">
+            <div class="menu-card-image"><img src="assets/images/food-paneer-tikka.jpg" alt="Chargrilled paneer tikka with herbs" loading="lazy"><span class="menu-card-badge">Guest favourite</span></div>
+            <div class="menu-card-content"><p class="menu-card-category">Starters</p><h3 class="menu-card-name">Paneer Tikka</h3><p class="menu-card-desc">Smoky, chargrilled paneer with peppers and a bright mint chutney.</p><div class="menu-card-footer"><span class="menu-card-price" data-price="320">₹320</span><button class="btn-add-cart" type="button" aria-label="Add Paneer Tikka to cart">Add to Cart</button></div></div>
+          </article>
+          <article class="menu-card fade-in" data-category="starters">
+            <div class="menu-card-image"><img src="assets/images/food-samosa-chaat.jpg" alt="Crisp samosa chaat topped with chutneys" loading="lazy"></div>
+            <div class="menu-card-content"><p class="menu-card-category">Starters</p><h3 class="menu-card-name">Samosa Chaat</h3><p class="menu-card-desc">Golden pastry, spiced chickpeas, cool yoghurt and tangy chutneys.</p><div class="menu-card-footer"><span class="menu-card-price" data-price="220">₹220</span><button class="btn-add-cart" type="button" aria-label="Add Samosa Chaat to cart">Add to Cart</button></div></div>
+          </article>
+          <article class="menu-card fade-in" data-category="south-indian">
+            <div class="menu-card-image"><img src="assets/images/food-masala-dosa.jpg" alt="Crisp masala dosa with chutneys and sambar" loading="lazy"><span class="menu-card-badge">House classic</span></div>
+            <div class="menu-card-content"><p class="menu-card-category">South Indian</p><h3 class="menu-card-name">Masala Dosa</h3><p class="menu-card-desc">A crisp rice-and-lentil dosa wrapped around gently spiced potato.</p><div class="menu-card-footer"><span class="menu-card-price" data-price="260">₹260</span><button class="btn-add-cart" type="button" aria-label="Add Masala Dosa to cart">Add to Cart</button></div></div>
+          </article>
+          <article class="menu-card fade-in" data-category="main-course">
+            <div class="menu-card-image"><img src="assets/images/food-butter-chicken.jpg" alt="Butter chicken in a creamy tomato sauce" loading="lazy"></div>
+            <div class="menu-card-content"><p class="menu-card-category">Main Course</p><h3 class="menu-card-name">Butter Chicken</h3><p class="menu-card-desc">Tender chicken in a velvety tomato gravy with a hint of smoke.</p><div class="menu-card-footer"><span class="menu-card-price" data-price="420">₹420</span><button class="btn-add-cart" type="button" aria-label="Add Butter Chicken to cart">Add to Cart</button></div></div>
+          </article>
+          <article class="menu-card fade-in" data-category="chinese">
+            <div class="menu-card-image"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Wok-tossed noodles with vegetables" loading="lazy"></div>
+            <div class="menu-card-content"><p class="menu-card-category">Chinese</p><h3 class="menu-card-name">Garden Hakka Noodles</h3><p class="menu-card-desc">Wok-tossed noodles, crisp vegetables and a lively garlic-soy finish.</p><div class="menu-card-footer"><span class="menu-card-price" data-price="310">₹310</span><button class="btn-add-cart" type="button" aria-label="Add Garden Hakka Noodles to cart">Add to Cart</button></div></div>
+          </article>
+          <article class="menu-card fade-in" data-category="biryani">
+            <div class="menu-card-image"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Fragrant chicken biryani with spices" loading="lazy"><span class="menu-card-badge">Slow cooked</span></div>
+            <div class="menu-card-content"><p class="menu-card-category">Biryani</p><h3 class="menu-card-name">Dum Chicken Biryani</h3><p class="menu-card-desc">Fragrant basmati, warming spices and tender chicken, sealed and slow-cooked.</p><div class="menu-card-footer"><span class="menu-card-price" data-price="390">₹390</span><button class="btn-add-cart" type="button" aria-label="Add Dum Chicken Biryani to cart">Add to Cart</button></div></div>
+          </article>
+          <article class="menu-card fade-in" data-category="desserts">
+            <div class="menu-card-image"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Creamy scoop of vanilla ice cream with fruit" loading="lazy"></div>
+            <div class="menu-card-content"><p class="menu-card-category">Desserts</p><h3 class="menu-card-name">Seasonal Kulfi</h3><p class="menu-card-desc">A slow-churned Indian frozen treat with cardamom and seasonal fruit.</p><div class="menu-card-footer"><span class="menu-card-price" data-price="180">₹180</span><button class="btn-add-cart" type="button" aria-label="Add Seasonal Kulfi to cart">Add to Cart</button></div></div>
+          </article>
+          <article class="menu-card fade-in" data-category="drinks">
+            <div class="menu-card-image"><img src="https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Chilled mango drink served over ice" loading="lazy"></div>
+            <div class="menu-card-content"><p class="menu-card-category">Drinks</p><h3 class="menu-card-name">Mango Lassi</h3><p class="menu-card-desc">Ripe mango blended with yoghurt for a cool, creamy classic.</p><div class="menu-card-footer"><span class="menu-card-price" data-price="160">₹160</span><button class="btn-add-cart" type="button" aria-label="Add Mango Lassi to cart">Add to Cart</button></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="offers section-padding" id="offers" aria-labelledby="offers-title">
+      <div class="container">
+        <div class="section-header fade-in"><span class="section-subtitle">A little extra to love</span><h2 class="section-title" id="offers-title">Good things come in threes</h2><p class="section-desc">Gather your favourite people and make an occasion of it.</p><div class="title-divider"></div></div>
+        <div class="offers-grid">
+          <article class="offer-card fade-in"><div class="offer-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div><h3 class="offer-title">Family Table</h3><p class="offer-desc">Bring everyone together with a generous spread of sharing plates and house favourites.</p><span class="offer-discount">20% off family meals</span></article>
+          <article class="offer-card fade-in"><div class="offer-icon"><i class="fa-solid fa-calendar-star" aria-hidden="true"></i></div><h3 class="offer-title">Weekend Special</h3><p class="offer-desc">Make the weekend delicious with a rotating chef's special, served Saturday and Sunday.</p><span class="offer-discount">A new special every weekend</span></article>
+          <article class="offer-card fade-in"><div class="offer-icon"><i class="fa-solid fa-martini-glass-citrus" aria-hidden="true"></i></div><h3 class="offer-title">Cheers Together</h3><p class="offer-desc">Pick any two signature coolers and let us take care of the second one.</p><span class="offer-discount">Buy 1, get 1 free drinks</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose section-padding" id="why-choose" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-header fade-in"><span class="section-subtitle">The Spice Garden feeling</span><h2 class="section-title" id="why-title">A little more care in every detail</h2><div class="title-divider"></div></div>
+        <div class="why-grid">
+          <article class="why-card fade-in"><div class="why-card-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div><h3 class="why-card-title">Fresh Ingredients</h3><p class="why-card-desc">Thoughtfully chosen produce and spices bring colour and character to every plate.</p></article>
+          <article class="why-card fade-in"><div class="why-card-icon"><i class="fa-solid fa-kitchen-set" aria-hidden="true"></i></div><h3 class="why-card-title">Experienced Chefs</h3><p class="why-card-desc">A kitchen team that respects tradition and loves adding its own little touch.</p></article>
+          <article class="why-card fade-in"><div class="why-card-icon"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i></div><h3 class="why-card-title">Fast, Warm Service</h3><p class="why-card-desc">Attentive hospitality, whether you are here for a quick lunch or a long evening.</p></article>
+          <article class="why-card fade-in"><div class="why-card-icon"><i class="fa-solid fa-wallet" aria-hidden="true"></i></div><h3 class="why-card-title">Everyday Value</h3><p class="why-card-desc">Generous portions and a welcoming menu made for sharing, at prices that feel fair.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section-padding" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-header fade-in"><span class="section-subtitle">A glimpse around the table</span><h2 class="section-title" id="gallery-title">Good food, good company</h2><p class="section-desc">A few moments from the Spice Garden kitchen and dining room.</p><div class="title-divider"></div></div>
+        <div class="gallery-grid">
+          <button class="gallery-item fade-in" type="button" aria-label="View restaurant dining room"><img src="assets/images/about-restaurant.jpg" alt="Warm restaurant interior with intimate table settings" loading="lazy"><span class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span></button>
+          <button class="gallery-item fade-in" type="button" aria-label="View our paneer tikka"><img src="assets/images/food-paneer-tikka.jpg" alt="Paneer tikka fresh from the grill" loading="lazy"><span class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span></button>
+          <button class="gallery-item fade-in" type="button" aria-label="View the Spice Garden kitchen"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Chef preparing a dish in a restaurant kitchen" loading="lazy"><span class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span></button>
+          <button class="gallery-item fade-in" type="button" aria-label="View our dining room"><img src="assets/images/hero-bg.jpg" alt="A beautifully set table ready for dinner" loading="lazy"><span class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span></button>
+          <button class="gallery-item fade-in" type="button" aria-label="View our masala dosa"><img src="assets/images/food-masala-dosa.jpg" alt="Golden masala dosa served with chutney" loading="lazy"><span class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span></button>
+          <button class="gallery-item fade-in" type="button" aria-label="View our biryani"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Basmati biryani with fresh herbs" loading="lazy"><span class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section-padding" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-header fade-in"><span class="section-subtitle">Kind words from our guests</span><h2 class="section-title" id="reviews-title">The best part is sharing</h2><div class="title-divider"></div></div>
+        <div class="reviews-grid">
+          <article class="review-card fade-in"><span class="review-quote" aria-hidden="true">“</span><div class="review-stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="review-text">“The masala dosa was beautifully crisp and the staff made us feel right at home. Already planning our next visit.”</p><div class="review-author"><span class="review-avatar" aria-hidden="true">AN</span><div><p class="review-author-name">Ananya N.</p><p class="review-author-label">A table for two</p></div></div></article>
+          <article class="review-card fade-in"><span class="review-quote" aria-hidden="true">“</span><div class="review-stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="review-text">“We ordered a bit of everything for the family and every plate disappeared. Lovely flavours and generous portions.”</p><div class="review-author"><span class="review-avatar" aria-hidden="true">RK</span><div><p class="review-author-name">Rahul K.</p><p class="review-author-label">Family lunch</p></div></div></article>
+          <article class="review-card fade-in"><span class="review-quote" aria-hidden="true">“</span><div class="review-stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="review-text">“A relaxed spot with a menu that has something for everyone. The paneer tikka and mango lassi are a must.”</p><div class="review-author"><span class="review-avatar" aria-hidden="true">SM</span><div><p class="review-author-name">Sara M.</p><p class="review-author-label">Weekend regular</p></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation section-padding" id="reservation" aria-labelledby="reservation-title">
+      <div class="container">
+        <div class="section-header fade-in"><span class="section-subtitle">Your table is waiting</span><h2 class="section-title" id="reservation-title">Let's make a date</h2><p class="section-desc">Tell us when you would like to visit. We will be happy to welcome you.</p><div class="title-divider"></div></div>
+        <div class="reservation-form-wrapper fade-in">
+          <form class="reservation-form" id="reservation-form" novalidate>
+            <div class="form-group"><label for="booking-name">Your name</label><input id="booking-name" name="name" type="text" autocomplete="name" placeholder="e.g. Priya Sharma" required aria-describedby="booking-name-error"><small class="error-msg" id="booking-name-error"></small></div>
+            <div class="form-group"><label for="booking-email">Email address</label><input id="booking-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="booking-email-error"><small class="error-msg" id="booking-email-error"></small></div>
+            <div class="form-group"><label for="booking-phone">Phone number</label><input id="booking-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" required aria-describedby="booking-phone-error"><small class="error-msg" id="booking-phone-error"></small></div>
+            <div class="form-group"><label for="booking-guests">Number of guests</label><select id="booking-guests" name="guests" required aria-describedby="booking-guests-error"><option value="">Select guests</option><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6 guests</option><option>7+ guests</option></select><small class="error-msg" id="booking-guests-error"></small></div>
+            <div class="form-group"><label for="booking-date">Date</label><input id="booking-date" name="date" type="date" required aria-describedby="booking-date-error"><small class="error-msg" id="booking-date-error"></small></div>
+            <div class="form-group"><label for="booking-time">Time</label><select id="booking-time" name="time" required aria-describedby="booking-time-error"><option value="">Choose a time</option><option>12:00 PM</option><option>12:30 PM</option><option>1:00 PM</option><option>1:30 PM</option><option>2:00 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option></select><small class="error-msg" id="booking-time-error"></small></div>
+            <div class="form-group full-width"><label for="booking-request">Special request <span>(optional)</span></label><textarea id="booking-request" name="request" placeholder="A high chair, a birthday note, or anything else we should know?"></textarea></div>
+            <div class="form-submit-wrapper"><button class="btn btn-primary" type="submit">Book Table <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><p class="section-desc" style="margin-top: 12px; font-size: .82rem;">A booking request is not confirmed until our team replies.</p></div>
+          </form>
+          <div class="success-message" id="reservation-success" role="status" aria-live="polite"><div class="success-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></div><h3>Thank you, <span id="booking-confirmation-name">friend</span>!</h3><p>Your table request is ready. Please call us to confirm your reservation.</p><button class="btn btn-secondary" id="book-again" type="button" style="margin-top: 20px;">Make another request</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-padding" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header fade-in"><span class="section-subtitle">Come say hello</span><h2 class="section-title" id="contact-title">Find us at the table</h2><p class="section-desc">Questions, celebrations, or just craving a good meal? We would love to hear from you.</p><div class="title-divider"></div></div>
+        <div class="contact-grid">
+          <div class="fade-in-left">
+            <div class="contact-info-cards">
+              <article class="contact-card"><span class="contact-card-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span><div><h3 class="contact-card-title">Visit us</h3><p class="contact-card-text">24 MG Road<br>Bengaluru, Karnataka 560001</p></div></article>
+              <article class="contact-card"><span class="contact-card-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span><div><h3 class="contact-card-title">Call us</h3><p class="contact-card-text"><a href="tel:+918045678900">+91 80 4567 8900</a></p></div></article>
+              <article class="contact-card"><span class="contact-card-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span><div><h3 class="contact-card-title">Email us</h3><p class="contact-card-text"><a href="mailto:hello@spicegarden.example">hello@spicegarden.example</a></p></div></article>
+              <article class="contact-card"><span class="contact-card-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span><div><h3 class="contact-card-title">Opening hours</h3><p class="contact-card-text">Daily, 12:00 pm – 10:30 pm</p></div></article>
+            </div>
+            <div class="contact-social" aria-label="Social media">
+              <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            </div>
+            <div class="contact-form-section">
+              <h3 class="footer-title">Send us a note</h3>
+              <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-group"><label for="contact-name">Your name</label><input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Your name" required aria-describedby="contact-name-error"><small class="error-msg" id="contact-name-error"></small></div>
+                <div class="form-group"><label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="contact-email-error"><small class="error-msg" id="contact-email-error"></small></div>
+                <div class="form-group full-width"><label for="contact-message">Your message</label><textarea id="contact-message" name="message" placeholder="How can we help?" required aria-describedby="contact-message-error"></textarea><small class="error-msg" id="contact-message-error"></small></div>
+                <div class="form-group full-width"><button class="btn btn-dark" type="submit">Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button></div>
+              </form>
+              <p class="contact-success" id="contact-success" role="status" aria-live="polite"></p>
+              <p class="contact-error" id="contact-error" role="alert"></p>
+            </div>
+          </div>
+          <div class="contact-map fade-in-right"><iframe title="Map of MG Road, Bengaluru" src="https://maps.google.com/maps?q=MG%20Road%2C%20Bengaluru&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top"><div class="container footer-grid">
+      <div class="footer-brand"><a class="nav-logo" href="#home"><span class="nav-logo-icon"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i></span><span class="nav-logo-text">Spice <span>Garden</span></span></a><p>Taste the Tradition, Love Every Bite. A welcoming table for Indian, South Indian, Chinese and Continental favourites.</p><div class="footer-social" aria-label="Social media"><a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a><a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></div></div>
+      <div><h3 class="footer-title">Explore</h3><ul class="footer-links"><li><a href="#about"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Our story</a></li><li><a href="#menu"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> The menu</a></li><li><a href="#offers"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Offers</a></li><li><a href="#gallery"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Gallery</a></li></ul></div>
+      <div><h3 class="footer-title">Plan a visit</h3><ul class="footer-links"><li><a href="#reservation"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Book a table</a></li><li><a href="#contact"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Contact</a></li><li><a href="#contact"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Opening hours</a></li></ul></div>
+      <div><h3 class="footer-title">Find us</h3><div class="footer-contact-item"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>24 MG Road, Bengaluru,<br>Karnataka 560001</span></div><div class="footer-contact-item"><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+918045678900">+91 80 4567 8900</a></div><div class="footer-contact-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:hello@spicegarden.example">hello@spicegarden.example</a></div></div>
+    </div></div>
+    <div class="footer-bottom"><div class="container">© <span id="current-year"></span> Spice Garden Restaurant. Made with care, served with joy.</div></div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-sidebar" id="cart-sidebar" aria-label="Your shopping cart" aria-hidden="true">
+    <div class="cart-header"><h2>Your Bag <span id="cart-heading-count">(0)</span></h2><button class="cart-close" id="cart-close" type="button" aria-label="Close cart"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
+    <div class="cart-items" id="cart-items" aria-live="polite"></div>
+    <div class="cart-footer"><div class="cart-total"><span>Subtotal</span><span id="cart-total">₹0</span></div><button class="btn btn-primary cart-checkout-btn" id="cart-checkout" type="button">Continue to reservation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button></div>
+  </aside>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image" aria-hidden="true"><button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close image"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><img id="lightbox-image" src="" alt=""></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"><i class="fa-solid fa-check-circle" aria-hidden="true"></i><span id="toast-message"></span></div>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+  <script src="script.js" defer></script>
+</body>
+</html>
